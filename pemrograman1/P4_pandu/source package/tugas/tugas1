@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class tugas1 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan biaya Makan: ");
+        double makan = input.nextDouble();
+
+        System.out.print("Masukkan biaya Transport: ");
+        double transport = input.nextDouble();
+
+        System.out.print("Masukkan biaya Belanja: ");
+        double belanja = input.nextDouble();
+
+        double total = makan + transport + belanja;
+
+        System.out.println("\nTotal = " + makan + " + " + transport + " + " + belanja + " = " + total);
+
+        double persenMakan = (makan / total) * 100;
+        double persenTransport = (transport / total) * 100;
+        double persenBelanja = (belanja / total) * 100;
+
+        System.out.println("\nPersentase:");
+        System.out.printf("Makan = %.1f%%\n", persenMakan);
+        System.out.printf("Transport = %.1f%%\n", persenTransport);
+        System.out.printf("Belanja = %.1f%%\n", persenBelanja);
+
+        input.close();
+    }
+}
